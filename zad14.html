@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <title>Zadanie 13 - Layout strony</title>
+  <style>
+    body { font-family: Arial, sans-serif; background:#f7f7f7; }
+    table.layout { width: 80%; margin: 20px auto; border-collapse: collapse; border: 3px solid #2c6f9e; }
+    .header, .footer { background: #2c6f9e; color: white; text-align: center; padding: 18px; font-size: 20px; }
+    .left, .right { width: 18%; vertical-align: top; background:#e9f2f7; text-align:center; padding: 12px; }
+    .main { vertical-align: top; text-align: left; padding: 16px; }
+    .menu-list { list-style: none; padding: 0; margin: 0; }
+    .menu-list li { margin: 8px 0; }
+    .menu-list a { text-decoration: none; color:#004466; }
+    /* dekoracje wewnątrz obszaru głównego */
+    .main .box { border:2px dashed #ccc; padding:12px; margin-bottom:12px; background:white; }
+    .marquee { display:block; margin-bottom:12px; font-size:22px; color:green; }
+    footer note { font-size:12px; color:#fff; }
+  </style>
+</head>
+<body>
+
+  <table class="layout" border="0" role="presentation">
+    <tr>
+      <td colspan="3" class="header">
+        NAGŁÓWEK - Przykład layoutu (Zadanie 13)
+      </td>
+    </tr>
+
+    <tr>
+      <td class="left">
+        <strong>OKNO1 - lewe menu</strong>
+        <ul class="menu-list">
+          <li><a href="Dowcipy.html">Dowcipy</a></li>
+          <li><a href="#pobierz">Pobierz plik</a></li>
+          <li><a href="tabela.html">Tabela</a></li>
+          <li><a href="formularz.html">Formularz</a></li>
+        </ul>
+      </td>
+
+      <td class="main">
+        <!-- OKNO2 / obszar główny -->
+        <div class="marquee">
+          <marquee behavior="scroll" direction="left" scrollamount="6" style="color:green; font-weight:700;">
+            Wesołowski — animacja MARQUEE
+          </marquee>
+        </div>
+
+        <div id="dowcipy" class="box">
+          <h2>Obszar główny — przykładowa zawartość</h2>
+          <p>Tu wstawiasz treść strony: krótki opis, zdjęcia, dowcipy itp. W zadaniu miał być obszar główny zawierający konkretne informacje — możesz zamienić ten tekst na własne dane.</p>
+          <p>Przykład: lista dowcipów, grafiki, linki do podstron.</p>
+        </div>
+
+        <div id="pobierz" class="box">
+          <h3>Przykład linku do pobrania pliku</h3>
+          <!-- jeśli masz plik np. "plik_kowalski.zip" w tym samym folderze -->
+          <p><a href="plik_twoje_nazwisko.zip" download>kliknij, aby pobrać przykładowy plik (plik_twoje_nazwisko.zip)</a></p>
+        </div>
+
+        <div id="tabela" class="box">
+          <h3>Przykład miejsca na tabelę</h3>
+          <p>https://rawcdn.githack.com/ajkapo/html-lekcj-/refs/heads/main/tabela_wykonanie.html</p>
+        </div>
+
+        <div id="formularz" class="box">
+          <h3>Przykład miejsca na formularz</h3>
+          <p>Tutaj wstaw formularz (zadanie 11) lub link do pliku formularz_twoje_nazwisko.html.</p>
+        </div>
+      </td>
+
+      <td class="right">
+        <strong>OKNO3 - prawe menu</strong>
+        <ul class="menu-list">
+          <li><a href="start.html" target="strony">Start</a></li>
+          <li><a href="#dowcipy">Dowcipy w głównym oknie</a></li>
+          <li><a href="#pobierz">Pobierz plik</a></li>
+          <li><a href="mailto:twoj_email@domena.pl">Wyślij pocztę</a></li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="3" class="footer">
+        STOPKA — tutaj informacje o autorze / klasa / data
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>

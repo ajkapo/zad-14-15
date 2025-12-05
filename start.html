@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <title>Zadanie 13 - Layout strony</title>
+  <style>
+    body { font-family: Arial, sans-serif; background:#f7f7f7; }
+    table.layout { width: 80%; margin: 20px auto; border-collapse: collapse; border: 3px solid #2c6f9e; }
+    .header, .footer { background: #2c6f9e; color: white; text-align: center; padding: 18px; font-size: 20px; }
+    .left, .right { width: 18%; vertical-align: top; background:#e9f2f7; text-align:center; padding: 12px; }
+    .main { vertical-align: top; text-align: left; padding: 16px; }
+    .menu-list { list-style: none; padding: 0; margin: 0; }
+    .menu-list li { margin: 8px 0; }
+    .menu-list a { text-decoration: none; color:#004466; }
+    .main .box { border:2px dashed #ccc; padding:12px; margin-bottom:12px; background:white; }
+    .marquee { display:block; margin-bottom:12px; font-size:22px; color:green; }
+    footer note { font-size:12px; color:#fff; }
+  </style>
+</head>
+<body>
+
+  <table class="layout" border="0" role="presentation">
+    <tr>
+      <td colspan="3" class="header">
+       Gdańsk, 03.12.2025r.
+		<img src="logo_wesolowski.png" border=1 align=left> 
+
+      </td>
+    </tr>
+
+    <tr>
+      <td class="left">
+        <strong></strong>
+        <ul class="menu-list">
+          <li><a href="Dowcipy.html">Dowcipy</a></li>
+          <li><a href="plik.zip">Pobierz plik zip z grafikami</a></li>
+          <li><a href="tabela.html">Tabela</a></li>
+          <li><a href="formularz.html">Formularz</a></li>
+        </ul>
+      </td>
+
+      <td class="main">
+              <div class="marquee">
+          <marquee behavior="scroll" direction="left" scrollamount="6" style="color:green; font-weight:700;">
+            Wesołowski — animacja MARQUEE
+          </marquee>
+        </div>
+
+        <div id="dowcipy" class="box">
+          <h2>Obszar główny</h2>
+          <p>Jako informatyk zajmuję się projektowaniem nowoczesnych stron internetowych, które łączą funkcjonalność z estetyką. Na tej stronie znajdziesz interaktywny formularz, który pozwala na szybkie przesyłanie danych oraz przykładową tabelę do prezentacji informacji w przejrzysty sposób. Dodatkowo przygotowałem sekcję z dowcipami o informatykach, które pokazują humorystyczną stronę naszej pracy. Tworzenie stron www to dla mnie nie tylko praca, ale również pasja, dzięki której mogę realizować kreatywne projekty. Dbam, aby każda strona była przyjazna dla użytkownika i łatwa w nawigacji. Zachęcam do eksplorowania wszystkich sekcji i odkrywania, jak zabawa i funkcjonalność mogą iść w parze na jednej stronie.</p>
+          <p>Przykład: 
+			<ul>
+				<li><a href="Dowcipy.html">Dowcipy</a></li>
+				<li><a href="tabela.html">Tabela</a></li>
+				<li><a href="formularz.html">Formularz</a></li>
+			</ul>
+        </div>
+
+        <div id="pobierz" class="box">
+          <h3>Przykład linku do pobrania pliku</h3>
+                   <p><a href="plik_wesolowski.zip" download>kliknij, aby pobrać przykładowy plik (plik_wesolowski.zip)</a></p>
+        </div>
+
+        <div id="tabela" class="box">
+          <h3>Przykład miejsca na tabelę</h3>
+          <p><a href="tabela.html">Tabela</p>
+        </div>
+
+        <div id="formularz" class="box">
+          <h3>Przykład miejsca na formularz</h3>
+          <p><a href="formularz.html">Formularz</a></p>
+        </div>
+      </td>
+
+      <td class="right">
+        <strong></strong>
+             
+	  <map id="mapa_wesolowski"> 
+            <area shape="circle" coords="49,34,20" href="plik.zip">
+			<area shape="rect" coords="17,73,81,107" href="tabela.html" target="Tabela">
+            <area shape="poly" coords="47,131,31,164,66,165" href="formularz.html" target="Formularz"> 
+			<area shape="rect" coords="16,187,81,222" href="mailto:demonfortded@gmail.com"> 
+			<area shape="circle" coords="47,260,20" href="start.html" target="Strona_Główna">  
+	  </map> 
+      <img src="mapa.gif" alt="tutaj wybieraj linki" usemap="#mapa_wesolowski"> 
+
+
+	</td>
+    </tr>
+
+    <tr>
+      <td colspan="3" class="footer">
+        Paweł Wesołowski / Klasa 1P / nr dziennika 26
+		<br>Gdańsk 03.12.2025r.
+		<!-- www.DarmowyLicznik.pl -->
+<div class="image-rotator"><div class="rotator-slide" id="rotator-slide-1"><a href="https://www.darmowylicznik.pl/" title="Przejdź na stronę licznika" target="_blank"><img src="https://www.darmowylicznik.pl/licznik.php?id=148486" alt="Darmowy licznik odwiedzin" style="border:0px;" /></a></div></div>
+<!-- END www.DarmowyLicznik.pl -->
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>
